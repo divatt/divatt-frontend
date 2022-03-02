@@ -1,0 +1,747 @@
+<!-- section start -->
+<section>
+  <div class="collection-wrapper ">
+    <div class="container">
+      <div class="row data-sticky_parent sidebar">
+        <div class="col-lg-12 col-sm-12 col-xs-12">
+          <div class="container-fluid" style="position: relative;">
+            <div class="row">
+              <div class="col">
+              
+                  <ng-template *ngIf="productDetail" class="col-12" ngFor let-item [ngForOf]="productDetail.pictures">
+                    <div class="mb-3 d-inline-block" >
+                      <img class="" src={{item}} alt="" class="img-fluid blur-up lazyload"/>
+                    </div>
+                  </ng-template>
+
+                  <!-- <div class="col-12 product_img_scroll image-scroll" data-sticky_column>
+                    <div>
+                      <div>
+                        <img src="../assets/images/pro3/1.jpg" alt="" class="img-fluid blur-up lazyload" />
+                      </div>
+                      <div>
+                        <img src="../assets/images/pro3/2.jpg" alt="" class="img-fluid blur-up lazyload" />
+                      </div>
+                      <div>
+                        <img src="../assets/images/pro3/1.jpg" alt="" class="img-fluid blur-up lazyload" />
+                      </div>
+                      <div>
+                        <img src="../assets/images/pro/4.jpg" alt="" class="img-fluid blur-up lazyload" />
+                      </div>
+                      <div>
+                        <img src="../assets/images/pro/5.jpg" alt="" class="img-fluid blur-up lazyload" />
+                      </div>
+                    </div>
+                  </div> -->
+              
+              </div>
+              <div class="d-none d-md-block col-lg-6 rtl-text">
+                <div class="product-right pro_sticky_info product-detail-dialog shadow-sm" data-sticky_column *ngIf="productDetail">
+                  <h2 class="lead font-weight-bold">Ritu Verma</h2>
+                  <h1 class="lead">
+                    {{productDetail.name}}
+                  </h1>
+                  <hr/>
+                  <p class="justify-content">
+                    <span class="mr-2">
+                      <strong class="lead font-weight-bold">
+                        {{productDetail.salePrice | currency:'USD'}}
+                      </strong>
+                    </span>
+                    <span>
+                      <small>
+                        <del>{{productDetail.price | currency:'USD'}}</del>
+                      </small>
+                    </span>
+                    <span>
+                      <small class="text-danger" style="font-size: 16px;">
+                        ({{productDetail.discount}}% off)
+                      </small>
+                    </span>
+                  </p>
+
+
+                  <span><h3></h3>
+                  <h4><span></span>
+                  </h4></span>
+                 
+                  <div class="product-description">
+                  
+
+                    <mat-tab-group mat-align-tabs="center" (selectedTabChange)="0">
+                      <mat-tab label="Select Size">
+                       <div class="select-size">
+                        <div class="row p-1">
+                          <div class="col">
+                            <h6 class="lead float-start mt-3">
+                              Select Size
+                              
+                              <a href="" class="small mx-3 float-end" data-toggle="modal" data-target="#sizemodal" style="color: #44bd9d">size
+                                chart</a>
+                            </h6>
+                            
+                          </div>
+
+                        </div>
+                       
+                         
+                        <div class="modal fade" id="sizemodal" tabindex="-1" role="dialog"
+                          aria-labelledby="exampleModalLabel" aria-hidden="true">
+                          <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">
+                                  Sheer Straight Kurta
+                                </h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                  <span aria-hidden="true">&times;</span>
+                                </button>
+                              </div>
+                              <div class="modal-body">
+                                <img src="../assets/images/size-chart.jpg" alt="" class="img-fluid blur-up lazyload" />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="p-1 size-box">
+                          <ul>
+                            <li class="active"> <button type="button" class="btn btn-dark btn-circle btn-sm"><span class="lead">S</span></button></li>
+                            <li> <button type="button" class="btn btn-dark btn-circle btn-sm"><span class="lead">M</span></button></li>
+                            <li> <button type="button" class="btn btn-dark btn-circle btn-sm"><span class="lead">L</span></button></li>
+                            <li> <button type="button" class="btn btn-dark btn-circle btn-sm"><span class="lead">XL</span></button></li>
+                          </ul>
+                        </div>
+                       </div>
+                      </mat-tab>
+                      <mat-tab label="Customize">
+
+
+                       <div class="p-1">
+                        <mat-accordion class="example-headers-align" multi>
+                          <!-- #enddocregion multi -->
+                          <mat-expansion-panel>
+                            <mat-expansion-panel-header>
+                              <mat-panel-title>
+                               <p class="lead" style="font-size: 15px;">Upper Body</p>
+                              </mat-panel-title>
+                              <mat-panel-description>
+                               
+                               
+                              </mat-panel-description>
+                            </mat-expansion-panel-header>
+                        
+                            
+                        
+                          </mat-expansion-panel>
+                          <!-- #docregion disabled -->
+                          <mat-expansion-panel>
+                            <!-- #enddocregion disabled -->
+                            <mat-expansion-panel-header>
+                              <mat-panel-title>
+                                <p class="lead" style="font-size: 15px;">Lower Body</p>
+                              </mat-panel-title>
+                              <mat-panel-description>
+                                
+                              
+                              </mat-panel-description>
+                            </mat-expansion-panel-header>
+                        
+                           
+                          </mat-expansion-panel>
+                        
+                          <mat-expansion-panel>
+                            <mat-expansion-panel-header>
+                              <mat-panel-title>
+                                <p class="lead" style="font-size: 15px;">Questionaries</p>
+                              </mat-panel-title>
+                              <mat-panel-description>
+                                Ask us
+                                
+                              </mat-panel-description>
+                            </mat-expansion-panel-header>
+                        
+                           
+                          
+                          </mat-expansion-panel>
+                        </mat-accordion>
+                       
+                       </div> 
+
+                       
+
+                      </mat-tab>
+
+                    </mat-tab-group>
+
+
+            
+                  </div>
+                  <!-- <div class="product-buttons">
+                    <a data-toggle="modal" data-target="#addtocart" class="btn btn-solid"
+                      (click)="addToCart(product, counter)" class="btn btn-solid"
+                      [class.disabled]="counter > product.stock">add to cart</a>
+                    <a href="#" class="btn btn-solid">Wishlist</a>
+                  </div> -->
+
+                  <div class="product-buttons p-1 text-center">
+                    <button type="button" class="btn btn-product-detail"><span class="lead fs-25" style="font-size: 15px;">Add To Cart</span></button>
+                    <button type="button" class="btn btn-product-detail mx-3"><span class="lead fs-25" style="font-size: 15px;">Wishlist</span></button>
+                  </div>
+
+                  <div class="border-product">
+                    <h6 class="text-uppercase lead">product details</h6>
+                    <p>
+                      Sed ut perspiciatis, unde omnis iste natus error sit
+                      voluptatem accusantium doloremque laudantium, totam rem
+                      aperiam eaque ipsa, quae ab illo inventore veritatis et
+                      quasi architecto beatae vitae dicta sunt, explicabo. Nemo
+                      enim ipsam voluptatem,
+                    </p>
+                  </div>
+                  <div class="border-product">
+                    <h6 class="product-title">share it</h6>
+                    <div class="product-icon">
+                      <ul class="product-social">
+                        <li>
+                          <a href="#"><i class="fa fa-facebook"></i></a>
+                        </li>
+                        <li>
+                          <a href="#"><i class="fa fa-google-plus"></i></a>
+                        </li>
+                        <li>
+                          <a href="#"><i class="fa fa-twitter"></i></a>
+                        </li>
+                        <li>
+                          <a href="#"><i class="fa fa-instagram"></i></a>
+                        </li>
+                        <li>
+                          <a href="#"><i class="fa fa-rss"></i></a>
+                        </li>
+                      </ul>
+                      <form class="d-inline-block">
+                        <button class="wishlist-btn">
+                          <!-- <i class="fa fa-heart"></i> -->
+                          <!-- ><span class="title-font">Add To WishList</span> -->
+                        </button>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+<!-- Mobile version price card-->
+
+<div class="d-block d-sm-none col-12 rtl-text">
+  <div class="product-right pro_sticky_info product-mobile-detail-dialog shadow-sm" data-sticky_column *ngIf="productDetail">
+    <h2 class="lead font-weight-bold">Ritu Verma</h2>
+    <h1 class="lead">
+      {{productDetail.name}}
+    </h1>
+    <hr/>
+    <p class="justify-content">
+      <span class="mr-2">
+        <strong class="lead font-weight-bold">
+          {{productDetail.salePrice | currency:'USD'}}
+        </strong>
+      </span>
+      <span>
+        <small>
+          <del>{{productDetail.price | currency:'USD'}}</del>
+        </small>
+      </span>
+      <span>
+        <small class="text-danger" style="font-size: 16px;">
+          ({{productDetail.discount}}% off)
+        </small>
+      </span>
+    </p>
+
+
+    <span><h3></h3>
+    <h4><span></span>
+    </h4></span>
+   
+    <div class="product-description">
+    
+
+      <mat-tab-group mat-align-tabs="center" (selectedTabChange)="0">
+        <mat-tab label="Select Size">
+         <div class="select-size">
+          <div class="row p-1">
+            <div class="col">
+              <h6 class="lead float-start mt-3">
+                Select Size
+                
+                <a href="" class="small mx-3 float-end" data-toggle="modal" data-target="#sizemodal" style="color: #44bd9d">size
+                  chart</a>
+              </h6>
+              
+            </div>
+
+          </div>
+         
+           
+          <div class="modal fade" id="sizemodal" tabindex="-1" role="dialog"
+            aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">
+                    Sheer Straight Kurta
+                  </h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <img src="../assets/images/size-chart.jpg" alt="" class="img-fluid blur-up lazyload" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="p-1 size-box">
+            <ul>
+              <li class="active"> <button type="button" class="btn btn-dark btn-circle btn-sm"><span class="lead">S</span></button></li>
+              <li> <button type="button" class="btn btn-dark btn-circle btn-sm"><span class="lead">M</span></button></li>
+              <li> <button type="button" class="btn btn-dark btn-circle btn-sm"><span class="lead">L</span></button></li>
+              <li> <button type="button" class="btn btn-dark btn-circle btn-sm"><span class="lead">XL</span></button></li>
+            </ul>
+          </div>
+         </div>
+        </mat-tab>
+        <mat-tab label="Customize">
+
+
+         <div class="p-1">
+          <mat-accordion class="example-headers-align" multi>
+            <!-- #enddocregion multi -->
+            <mat-expansion-panel>
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                 <p class="lead" style="font-size: 15px;">Upper Body</p>
+                </mat-panel-title>
+                <mat-panel-description>
+                 
+                 
+                </mat-panel-description>
+              </mat-expansion-panel-header>
+          
+              
+          
+            </mat-expansion-panel>
+            <!-- #docregion disabled -->
+            <mat-expansion-panel>
+              <!-- #enddocregion disabled -->
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  <p class="lead" style="font-size: 15px;">Lower Body</p>
+                </mat-panel-title>
+                <mat-panel-description>
+                  
+                
+                </mat-panel-description>
+              </mat-expansion-panel-header>
+          
+             
+            </mat-expansion-panel>
+          
+            <mat-expansion-panel>
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  <p class="lead" style="font-size: 15px;">Questionaries</p>
+                </mat-panel-title>
+                <mat-panel-description>
+                  Ask us
+                  
+                </mat-panel-description>
+              </mat-expansion-panel-header>
+          
+             
+            
+            </mat-expansion-panel>
+          </mat-accordion>
+         
+         </div> 
+
+         
+
+        </mat-tab>
+
+      </mat-tab-group>
+
+
+
+    </div>
+    <!-- <div class="product-buttons">
+      <a data-toggle="modal" data-target="#addtocart" class="btn btn-solid"
+        (click)="addToCart(product, counter)" class="btn btn-solid"
+        [class.disabled]="counter > product.stock">add to cart</a>
+      <a href="#" class="btn btn-solid">Wishlist</a>
+    </div> -->
+
+    <div class=" d-flex product-buttons p-3 text-center">
+      <button type="button" class="btn btn-product-detail"><span class="lead fs-25" style="font-size: 15px;">Add To Cart</span></button>
+      <button type="button" class="btn btn-product-detail mx-3"><span class="lead fs-25" style="font-size: 15px;">Wishlist</span></button>
+    </div>
+
+    <div class="border-product">
+      <h6 class="text-uppercase lead">product details</h6>
+      <p>
+        Sed ut perspiciatis, unde omnis iste natus error sit
+        voluptatem accusantium doloremque laudantium, totam rem
+        aperiam eaque ipsa, quae ab illo inventore veritatis et
+        quasi architecto beatae vitae dicta sunt, explicabo. Nemo
+        enim ipsam voluptatem,
+      </p>
+    </div>
+    <div class="border-product">
+      <h6 class="product-title">share it</h6>
+      <div class="product-icon">
+        <ul class="product-social">
+          <li>
+            <a href="#"><i class="fa fa-facebook"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fa fa-google-plus"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fa fa-instagram"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fa fa-rss"></i></a>
+          </li>
+        </ul>
+        <form class="d-inline-block">
+          <button class="wishlist-btn">
+            <!-- <i class="fa fa-heart"></i> -->
+            <!-- ><span class="title-font">Add To WishList</span> -->
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Section ends -->
+
+<!-- product-tab starts -->
+<section class="tab-product m-0">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-lg-12">
+
+        <mat-tab-group>
+          <mat-tab label="Description">
+            <div class="row" [routerLink]="'/designer'">
+              <div class="col-md-2" style="padding-right: 30px">
+                <div class="d-flex flex-column align-items-center text-center">
+                  <img class="rounded mt-5" src="https://i.imgur.com/0eg0aG0.jpg" width="100%" />
+
+                  <!-- <span class="p-3"><h3>NEO DESIGNER</h3></span> -->
+                  <span class="p-3"><a href="#" class="btn btn-solid">Follow</a></span>
+                </div>
+              </div>
+              <div class="col text-justify p-3 py-5">
+                <!-- <div class="row">
+                                <div class="col-md-2"> -->
+                <div class="font-weight-bold">
+                  <div class="row">
+                    <div class="col">
+                      <h1 class="display-4">John Doe</h1>
+                    </div>
+                    <!-- <div class="col-md-9 text-left">3.6 Rating</div> -->
+                  </div>
+                  <div class="row">
+                    <div class="col">
+                      <p class="lead">
+                        Lorem Ipsum is simply dummy text of the printing and
+                        typesetting industry. Lorem Ipsum has been the industry's
+                        standard dummy text ever since the 1500s, when an unknown
+                        printer took a galley of type and scrambled it to make a
+                        type specimen book. It has survived not only five
+                        centuries, but also the leap into electronic typesetting,
+                        remaining essentially unchanged. It was popularised in the
+                        1960s with the release of Letraset sheets containing Lorem
+                        Ipsum passages, and more recently with desktop publishing
+                        software like Aldus PageMaker including versions of Lorem
+                        Ipsum.
+                      </p>
+                    </div>
+                  </div>
+
+                </div>
+                <!-- </div>
+                                <div class="col-md-10"> -->
+
+                <!-- </div>
+                            </div> -->
+              </div>
+            </div>
+          </mat-tab>
+          <mat-tab label="Details">
+            <div class="">
+              <div class="single-product-tables mt-3 justify-content">
+                <p class="lead">
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry. Lorem Ipsum has been the industry's
+                  standard dummy text ever since the 1500s, when an unknown
+                  printer took a galley of type and scrambled it to make a
+                  type specimen book. It has survived not only five
+                  centuries, but also the leap into electronic typesetting,
+                  remaining essentially unchanged. It was popularised in the
+                  1960s with the release of Letraset sheets containing Lorem
+                  Ipsum passages, and more recently with desktop publishing
+                  software like Aldus PageMaker including versions of Lorem
+                  Ipsum.
+                </p>
+              </div>
+              <div class="single-product-tables">
+                <table>
+                  <tbody>
+                    <tr>
+                      <td>Febric</td>
+                      <td>Chiffon</td>
+                    </tr>
+                    <tr>
+                      <td>Color</td>
+                      <td>Red</td>
+                    </tr>
+                    <tr>
+                      <td>Material</td>
+                      <td>Crepe printed</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <table>
+                  <tbody>
+                    <tr>
+                      <td>Length</td>
+                      <td>50 Inches</td>
+                    </tr>
+                    <tr>
+                      <td>Size</td>
+                      <td>S, M, L .XXL</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </mat-tab>
+        </mat-tab-group>
+
+
+
+
+</div>
+    </div>
+  </div>
+</section>
+<!-- product-tab ends -->
+
+<!-- product section start -->
+<section class="section-b-space ratio_asos">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 product-related">
+        <h2 class="lead">related products</h2>
+      </div>
+    </div>
+    <div class="section-t-space portfolio-section portfolio-padding metro-section port-col">
+      <div class="row isotopeContainer search-product">
+        <div class="col-xl-2 col-md-4 col-sm-6 isotopeSelector">
+          <div class="product-box">
+            <div class="img-wrapper">
+              <div class="front">
+                <a href="product-page(no-sidebar).html"><img
+                    src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80"
+                    class="img-fluid blur-up lazyload" alt="" /></a>
+              </div>
+              <div class="cart-info cart-wrap">
+                <button title="Whishlist">
+                  <img _ngcontent-pjg-c4="" alt="" class="img-fluid" style="width: 70%; padding: 5px"
+                    src="assets/images/divattIcons/lock.png" />
+                </button>
+                <!-- <button title="Whishlist">
+                              <img _ngcontent-pjg-c4="" alt="" class="img-fluid" style="width: 70%; padding: 5px;" src="assets/images/divattIcons/lock.png">
+                            </button> -->
+                <!-- -->
+              </div>
+            </div>
+            <div class="product-detail">
+              <a href="product-page(no-sidebar).html">
+                <h4><b>Ritu Verma</b></h4>
+                <h6 style="margin: 5px">Cotton Top</h6>
+              </a>
+              <h4>$500.00</h4>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-2 col-md-4 col-sm-6 isotopeSelector">
+          <div class="product-box">
+            <div class="img-wrapper">
+              <div class="front">
+                <a href="product-page(no-sidebar).html"><img
+                    src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80"
+                    class="img-fluid blur-up lazyload" alt="" /></a>
+              </div>
+              <div class="cart-info cart-wrap">
+                <button title="Whishlist">
+                  <img _ngcontent-pjg-c4="" alt="" class="img-fluid" style="width: 70%; padding: 5px"
+                    src="assets/images/divattIcons/lock.png" />
+                </button>
+                <!-- <button title="Whishlist">
+                              <img _ngcontent-pjg-c4="" alt="" class="img-fluid" style="width: 70%; padding: 5px;" src="assets/images/divattIcons/lock.png">
+                            </button> -->
+                <!-- -->
+              </div>
+            </div>
+            <div class="product-detail">
+              <a href="product-page(no-sidebar).html">
+                <h4><b>Ritu Verma</b></h4>
+                <h6 style="margin: 5px">Cotton Top</h6>
+              </a>
+              <h4>$500.00</h4>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-2 col-md-4 col-sm-6 isotopeSelector">
+          <div class="product-box">
+            <div class="img-wrapper">
+              <div class="front">
+                <a href="product-page(no-sidebar).html"><img
+                    src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80"
+                    class="img-fluid blur-up lazyload" alt="" /></a>
+              </div>
+              <div class="cart-info cart-wrap">
+                <button title="Whishlist">
+                  <img _ngcontent-pjg-c4="" alt="" class="img-fluid" style="width: 70%; padding: 5px"
+                    src="assets/images/divattIcons/lock.png" />
+                </button>
+                <!-- <button title="Whishlist">
+                              <img _ngcontent-pjg-c4="" alt="" class="img-fluid" style="width: 70%; padding: 5px;" src="assets/images/divattIcons/lock.png">
+                            </button> -->
+                <!-- -->
+              </div>
+            </div>
+            <div class="product-detail">
+              <a href="product-page(no-sidebar).html">
+                <h4><b>Ritu Verma</b></h4>
+                <h6 style="margin: 5px">Cotton Top</h6>
+              </a>
+              <h4>$500.00</h4>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-2 col-md-4 col-sm-6 isotopeSelector">
+          <div class="product-box">
+            <div class="img-wrapper">
+              <div class="front">
+                <a href="product-page(no-sidebar).html"><img
+                    src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80"
+                    class="img-fluid blur-up lazyload" alt="" /></a>
+              </div>
+              <div class="cart-info cart-wrap">
+                <button title="Whishlist">
+                  <img _ngcontent-pjg-c4="" alt="" class="img-fluid" style="width: 70%; padding: 5px"
+                    src="assets/images/divattIcons/lock.png" />
+                </button>
+                <!-- <button title="Whishlist">
+                              <img _ngcontent-pjg-c4="" alt="" class="img-fluid" style="width: 70%; padding: 5px;" src="assets/images/divattIcons/lock.png">
+                            </button> -->
+                <!-- -->
+              </div>
+            </div>
+            <div class="product-detail">
+              <a href="product-page(no-sidebar).html">
+                <h4><b>Ritu Verma</b></h4>
+                <h6 style="margin: 5px">Cotton Top</h6>
+              </a>
+              <h4>$500.00</h4>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-2 col-md-4 col-sm-6 isotopeSelector">
+          <div class="product-box">
+            <div class="img-wrapper">
+              <div class="front">
+                <a href="product-page(no-sidebar).html"><img
+                    src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80"
+                    class="img-fluid blur-up lazyload" alt="" /></a>
+              </div>
+              <div class="cart-info cart-wrap">
+                <button title="Whishlist">
+                  <img _ngcontent-pjg-c4="" alt="" class="img-fluid" style="width: 70%; padding: 5px"
+                    src="assets/images/divattIcons/lock.png" />
+                </button>
+                <!-- <button title="Whishlist">
+                              <img _ngcontent-pjg-c4="" alt="" class="img-fluid" style="width: 70%; padding: 5px;" src="assets/images/divattIcons/lock.png">
+                            </button> -->
+                <!-- -->
+              </div>
+            </div>
+            <div class="product-detail">
+              <a href="product-page(no-sidebar).html">
+                <h4><b>Ritu Verma</b></h4>
+                <h6 style="margin: 5px">Cotton Top</h6>
+              </a>
+              <h4>$500.00</h4>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-2 col-md-4 col-sm-6 isotopeSelector">
+          <div class="product-box">
+            <div class="img-wrapper">
+              <div class="front">
+                <a href="product-page(no-sidebar).html"><img
+                    src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80"
+                    class="img-fluid blur-up lazyload" alt="" /></a>
+              </div>
+              <div class="cart-info cart-wrap">
+                <button title="Whishlist">
+                  <img _ngcontent-pjg-c4="" alt="" class="img-fluid" style="width: 70%; padding: 5px"
+                    src="assets/images/divattIcons/lock.png" />
+                </button>
+                <!-- <button title="Whishlist">
+                              <img _ngcontent-pjg-c4="" alt="" class="img-fluid" style="width: 70%; padding: 5px;" src="assets/images/divattIcons/lock.png">
+                            </button> -->
+                <!-- -->
+              </div>
+            </div>
+            <div class="product-detail">
+              <a href="product-page(no-sidebar).html">
+                <h4><b>Ritu Verma</b></h4>
+                <h6 style="margin: 5px">Cotton Top</h6>
+              </a>
+              <h4>$500.00</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- product section end -->
+
+<!-- tap to top start -->
+<div class="tap-top">
+  <div><i class="fa fa-angle-double-up"></i></div>
+</div>
+<!-- tap to top end -->
+<script type="text/javascript" src="../assets/js/sticky-kit.js"></script>

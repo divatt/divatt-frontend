@@ -1,0 +1,132 @@
+<section class="section-b-space" style="overflow:hidden;">
+
+  <div class="collection-wrapper">
+    <div class="container-fluid">
+      <div class="row pb-5">
+        <div class="collection-content col">
+          <div class="page-main-content">
+            <div class="top-banner-wrapper">
+              <!-- <a href="#"><img src="../assets/images/mega-menu/2.jpg" class="img-fluid blur-up lazyload" alt=""></a> -->
+              <div class="row top-banner-content small-section">
+              <table class="mx-3" style="width: 100%;">
+                <tr class="" style="vertical-align: bottom;">
+                  <td>
+                  
+                      <div class="">
+                        <h1 class='d-none d-md-block mx-5 d-lg-block display-4'>{{collection_title + ' collections'| uppercase}}</h1>
+                        <h1 class='d-block d-sm-none mx-1 lead' style="font-size: 30px;">{{collection_title + ' collections'| uppercase}}</h1>
+                      </div>
+                        
+      
+      
+                   
+                  </td>
+                  <td style="vertical-align: middle;">
+                    <div class="d-none d-md-block mx-5 d-lg-block" style="text-align: right;">
+                        
+      
+                      <img class="img-fluid icon-width icon-height mx-3" id="menu-toggle" (click)="visiblefilter = true"
+                        src="assets/images/divattIcons/scissors.png"
+                        style="width:20px;height:25px;margin: 4px; padding: 1px;" width="20px">
+                    
+                  </div>
+                  
+                  </td>
+                </tr>
+                <tr>
+                  <td class="mobile-filter">
+                    <div class="d-block d-sm-none mx-1" style="text-align: right;">
+                        
+      
+                      <img class="img-fluid icon-width icon-height mx-3" id="menu-toggle" (click)="visiblefilter = true"
+                        src="assets/images/divattIcons/scissors.png"
+                        style="width:20px;height:25px;margin: 4px; padding: 1px;" width="20px">
+                    
+                  </div>
+                  </td>
+                </tr>
+              </table>
+            </div>
+            </div>
+
+           
+
+
+          </div>
+        </div>
+      </div>
+
+      <p-sidebar [(visible)]="visiblefilter" position="right" [modal]="false" [baseZIndex]="10000">
+  
+        <!-- Sidebar -->
+        <app-filter (productfilter)="setFilter($event)"></app-filter>
+
+        <!-- /#sidebar-wrapper -->
+      </p-sidebar>
+
+
+<div class="row" style="display: flex !important; justify-content: center;">
+ <div class="col-md-12 offset-md-3 product_list">
+
+
+  <ng-template let-content ngFor [ngForOf]="products | paginate: config">
+
+   
+  <div class="isotopeSelector px-4 mt-2 mb-2">
+    <div class="product-box">
+        <div class="img-wrapper">
+            <div class="front">
+                <a [routerLink]="'/product-detail/product/1'"><img [src]="content.category === 'men'?'https://i1.adis.ws/i/tom_ford/S-S-MENS-2021?$collectiongrid$':'https://middleeast-grlk5lagedl.stackpathdns.com/production/middleeast/images/1586855932109912-KL_SS20_WOMENS_LOOK1.jpg?w=1920&h=800&fit=clip&crop=faces&auto=%5B%22format%22%2C%20%22compress%22%5D&cs=srgb'" class="img-fluid blur-up lazyload" alt=""></a>
+            </div>
+            <div class="cart-info cart-wrap">
+  
+                <button title="Whishlist">
+                  <img _ngcontent-pjg-c4="" alt="" class="img-fluid" style="width: 70%; padding: 5px;" src="assets/images/divattIcons/lock.png">
+                </button>
+  
+            </div>
+        </div>
+  
+    </div>
+
+    <div class="product-productMetaInfo">
+      <h3 class="product-brand">{{content.name}}</h3>
+      <h4 class="product-product">{{content.name}}</h4>
+      <div class="product-price">
+        <span>
+          <span class="product-discountedPrice">
+            <!-- react-text: 507 -->Rs. <!-- /react-text --><!-- react-text: 508 -->{{content.price}}<!-- /react-text -->
+          </span>
+          <span class="product-strike">
+            <!-- react-text: 510 -->Rs. <!-- /react-text --><!-- react-text: 511 -->{{content.salePrice}}<!-- /react-text -->
+          </span>
+        </span>
+        <span class="product-discountPercentage">({{content.discount}}% OFF)</span>
+      </div>
+    </div>
+  </div>
+ 
+ </ng-template>
+
+
+
+
+
+
+ </div>
+ 
+</div>
+
+
+
+
+    </div>
+  </div>
+<div class="row">
+  <div class="col-12 mt-5" style="display: flex;justify-content: center;">
+    <pagination-controls (pageChange)="pageChange($event)" class="my-pagination"></pagination-controls>
+  </div>
+ 
+</div>
+
+</section>

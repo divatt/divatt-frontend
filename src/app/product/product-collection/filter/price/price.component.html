@@ -1,0 +1,15 @@
+<!-- price filter start here -->
+<div class="collection-collapse-block border-0 open">
+    <h3 class="collapse-block-title"><span class="lead">price</span></h3>
+   
+    <div class="collection-collapse-block-content">
+        <div class="collection-brand-filter">
+            <p class="mt-2 lead">{{range[0]+'-'+range[1]}}</p>
+            <div class="mt-5">
+               
+                 <range-slider [min]="min" [max]="max" [step]="50" [(ngModel)]="range" (onRangeChange)="priceChanged($event)" [highlightClass]="'stephighlightClass'" [barClass]="'stepBarClass'" [sliderClass]="'stepSliderClass'">    
+                 </range-slider>
+            </div>
+        </div>
+    </div>
+</div>
